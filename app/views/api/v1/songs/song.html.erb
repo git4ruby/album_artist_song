@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<h1>Song of <%= @artist.artist_name %> from album <%= @song.album.album_name %></h1>
+
+<p>
+  <strong>Song  name:</strong>
+  <%= @song.song_name %>
+</p>
+
+<%= link_to 'Edit', edit_api_v1_song_path(@song) %> |
+<%= link_to 'Back To Artists Page', api_v1_artists_path %>

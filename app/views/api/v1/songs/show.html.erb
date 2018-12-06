@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Song name:</strong>
+  <%= @song.song_name %>
+</p>
+
+<%= link_to 'Edit', edit_api_v1_song_path(@song) %> |
+<%= link_to 'Back', api_v1_songs_path %>
