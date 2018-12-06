@@ -7,11 +7,13 @@ module Api
       # GET /artists.json
       def index
         @artists = Artist.all
+        respond_to_format(@artists)
       end
 
       # GET /artists/1
       # GET /artists/1.json
       def show
+        respond_to_format(@artist)
       end
 
       # GET /artists/new
@@ -25,6 +27,7 @@ module Api
 
       def songs
         @artist_songs = @artist.songs
+        respond_to_format(@artist_songs)
       end
         
       # /api/v1/artists/mohit/songs/<song_id>
@@ -40,6 +43,7 @@ module Api
       # /api/v1/artists/mohit/albums
       def albums
         @artist_albums = @artist.albums
+        respond_to_format(@artist_albums)
       end
 
       # /api/v1/artists/mohit/albums/<album_id>

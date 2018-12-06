@@ -19,6 +19,7 @@ module Api
       def song
         @artist_songs = @artist.songs
         @song = @artist_songs.find(params[:song_id])
+        respond_to_format(@song)
       end
 
       # GET /songs/new

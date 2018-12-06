@@ -19,6 +19,7 @@ module Api
       def album
         @artist_albums = @artist.albums
         @album = @artist_albums.find(params[:album_id])
+        respond_to_format(@album)
       end
 
       # GET /albums/new
