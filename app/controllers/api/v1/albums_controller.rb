@@ -16,11 +16,11 @@ module Api
       end
 
       # /api/v1/artists/mohit/albums/<album_id>
-      def album
-        @artist_albums = @artist.albums
-        @album = @artist_albums.find(params[:album_id])
-        respond_to_format(@album)
-      end
+      # def album
+      #   @artist_albums = @artist.albums
+      #   @album = @artist_albums.find(params[:album_id])
+      #   respond_to_format(@album)
+      # end
 
       # GET /albums/new
       def new

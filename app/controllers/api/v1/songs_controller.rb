@@ -16,11 +16,11 @@ module Api
       end
 
       # /api/v1/artists/mohit/songs/<song_id>
-      def song
-        @artist_songs = @artist.songs
-        @song = @artist_songs.find(params[:song_id])
-        respond_to_format(@song)
-      end
+      # def song
+      #   @artist_songs = @artist.songs
+      #   @song = @artist_songs.find(params[:song_id])
+      #   respond_to_format(@song)
+      # end
 
       # GET /songs/new
       def new

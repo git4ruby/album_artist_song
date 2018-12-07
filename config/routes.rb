@@ -8,9 +8,9 @@ Rails.application.routes.draw do
       resources :artists do
         member do
           get 'albums'
-          get 'albums/:album_id', to: 'albums#album'
+          get 'albums/:album_id', to: 'artists#album'
           get 'songs'
-          get 'songs/:song_id', to: 'songs#song'
+          get 'songs/:song_id', to: 'artists#song'
         end
       end
     end

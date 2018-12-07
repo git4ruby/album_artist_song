@@ -31,10 +31,11 @@ module Api
       end
         
       # /api/v1/artists/mohit/songs/<song_id>
-      # def song
-      #   @artist_songs = @artist.songs
-      #   @song = @artist_songs.find(params[:song_id])
-      # end
+      def song
+        @artist_songs = @artist.songs
+        @song = @artist_songs.find(params[:song_id])
+        respond_to_format(@song)
+      end
 
       # /api/v1/artists/mohit
       def artist
@@ -47,10 +48,11 @@ module Api
       end
 
       # /api/v1/artists/mohit/albums/<album_id>
-      # def album
-      #   @artist_albums = @artist.albums
-      #   @album = @artist_albums.find(params[:album_id])
-      # end
+      def album
+        @artist_albums = @artist.albums
+        @album = @artist_albums.find(params[:album_id])
+        respond_to_format(@album)
+      end
 
       # POST /artists
       # POST /artists.json
